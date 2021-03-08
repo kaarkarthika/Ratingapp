@@ -1,0 +1,61 @@
+<!doctype html>
+<head>
+  <title> </title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="dist/starrr.css">
+
+</head>
+<body>
+  
+  <div class="container">
+  
+    <table class="table">
+	  <tbody>
+	    <tr><th>Test 1234</th><td><div class='starrr star'></div></td>
+	    <tr><th>Test 1234</th><td><div class='starrr star'></div></td>
+	    <tr><th>Test 1234</th><td><div class='starrr star'></div></td>
+	    <tr><th>Test 1234</th><td><div class='starrr star'></div></td>
+	    <tr><th>Test 1234</th><td><div class='starrr star'></div></td>
+		</tr>
+	  
+	  </tbody>
+	</table>
+  
+  
+  
+    <h3>Starrr</h3>
+
+    <h5>Click to rate:</h5>
+    <div class='starrr star'  ></div>
+    <div>&nbsp;
+      <span class='your-choice-was' style='display: none;'>
+        Your rating was <span class='choice'></span>.
+      </span>
+    </div>
+
+    
+
+    
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+  <script src="dist/starrr.js"></script>
+  <script>
+    $('.star').starrr({
+      change: function(e, value){
+        if (value) {
+          $('.your-choice-was').show();
+          $('.choice').text(value);
+        } else {
+          $('.your-choice-was').hide();
+        }
+      }
+    });
+
+ 
+  </script>
+ 
+</body>
+</html>
